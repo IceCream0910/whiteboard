@@ -104,7 +104,7 @@ var listautenti = '';
 roster.forEach(function(client) {
 listautenti =	listautenti +  client.nickname + '<br />';
 }); 
-listautenti = 'A USER HAS DISCONNECTED - LIST USERS IN THIS ROOM: ' +  listautenti;
+listautenti = '방을 나간 참여자가 있어요 - 현재 참여자 목록: ' +  listautenti;
 
 socket.broadcast.to(data.room).emit('listautentiser', {
 							'listautenti' : listautenti		
@@ -132,12 +132,12 @@ var listautenti = '';
 roster.forEach(function(client) {
 listautenti =	listautenti +  client.nickname + '<br />';
 }); 
-listautenti = 'LIST USERS IN THIS ROOM: ' +  listautenti;
+listautenti = '현재 참여자 목록: ' +  listautenti;
  
  
 socket.emit('setuproomser', {
 			'room' :  data.room,
-				'inforoom' : 'YOUR ROOM NAME IS VALID,<br />NOW YOUR PRIVATE ROOM IS ' + data.room + '<br />',
+				'inforoom' : '현재 이 방은 유효합니다.<br />code: ' + data.room + '<br />',
 				'listautenti' : listautenti
 			});
 socket.broadcast.to(data.room).emit('suonacampser', data);
@@ -160,7 +160,7 @@ roster.forEach(function(client) {
 listautenti =	listautenti +  client.nickname + '<br />';
 }); 
 console.log (listautenti);
-listautenti = 'LIST USERS IN THIS ROOM: ' +  listautenti;	
+listautenti = '현재 참여자 목록: ' +  listautenti;	
 socket.broadcast.to(data.room).emit('listautentiser', {
 							'listautenti' : listautenti		
 									});
