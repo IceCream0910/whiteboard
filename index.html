@@ -48,7 +48,7 @@
 	<div id="monitorcam" title="drag and drop this monitor" alt="drag and drop this monitor"><video id="video" style="width:320px;height:240px;" autoplay></video></div>	
 <div id="controlli">	
 <div style="float:left;width:90%;height:auto">
-<button id="cancellalavagna" class="btn btn-primary btn-sm">모두 지우기</button>&nbsp;&nbsp;<button id="pencilrubber" class="btn btn-primary btn-sm">Eraser</button> <input type="number" id="setrubbersize" min="10" max="300" step="5" value="50" class="form-control input-sm" />&nbsp;<input type="text" class="minicolors" id="minicolore" value="#000000" data-opacity="1.0" />
+<button id="cancellalavagna" class="btn btn-primary btn-sm">모두 지우기</button>&nbsp;&nbsp;<button id="pencilrubber" class="btn btn-primary btn-sm">지우개</button> <input type="number" id="setrubbersize" min="10" max="300" step="5" value="50" class="form-control input-sm" />&nbsp;<input type="text" class="minicolors" id="minicolore" value="#000000" data-opacity="1.0" />
 <select id="fontsize" class="form-control input-sm">
   <option value="14" selected="selected">글자크기</option>
   <option value="8">8</option>
@@ -76,7 +76,7 @@
 <option value="30">30</option>
 </select>
 <select id="spessore" class="form-control input-sm">
-  <option value="3" selected="selected">size pencil</option>
+  <option value="3" selected="selected">펜 굵기</option>
   <option value="1">1</option>
 	<option value="2">2</option>
 	<option value="3">3</option>
@@ -99,10 +99,10 @@
 <option value="20">20</option>
 </select>
 <input type="file" id="file-input" class="form-control input-sm">
-<input type="text" id="scrivi" size="auto" class="form-control input-sm" placeholder="Write text then 'enter' or double click on board" /><br />
+<input type="text" id="scrivi" size="auto" class="form-control input-sm" placeholder="메시지를 입력하고 엔터를 누르세요." /><br />
 <div id="testichat"></div>
-<button id="catturacam" class="btn btn-primary btn-sm">PHOTO WEBCAM</button> <button id="audiocall" disabled="disabled" class="btn btn-primary btn-sm">OPEN VOICE CALL</button><br />
-&nbsp;<label class="checkbox-inline"><input type="checkbox" id="autocamabi" value="">Capture image every</label><select id="tempocam" class= "form-control input-sm">
+<button id="catturacam" class="btn btn-primary btn-sm">화상 공유</button> <button id="audiocall" disabled="disabled" class="btn btn-primary btn-sm">마이크 공유</button><br />
+&nbsp;<label class="checkbox-inline"><input type="checkbox" id="autocamabi" value="">자동 이미지 저장 시간</label><select id="tempocam" class= "form-control input-sm">
 <option value="1000">1</option>
 <option value="2000">2</option>
 <option value="4000">4</option>
@@ -112,11 +112,11 @@
 	<option value="120000">120</option>
     <option value="300000">300</option>
 	<option value="600000">600</option>
-	</select>seconds<br />
+	</select>초<br />
 </div>
 <div id="frecce" onMouseOver='javascript:document.getElementById("frecce").style.backgroundColor ="#ffffff";'>
 
-<span style="font-size:28px;font-weight:"600">&nbsp;<br />&nbsp;<br />P<br />A<br />N<br />E<br />L</span>
+<span style="font-size:28px;font-weight:"600">&nbsp;<br />&nbsp;<br />더<br />보<br />기</span>
 
 </div>
 </div>
