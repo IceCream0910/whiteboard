@@ -32,7 +32,7 @@ stanza  = location.href.substring(location.href.indexOf('#')+1);
 	
  if(!username)
 {
-	username = prompt("Hey there, insert your nick name, please", "");
+	username = prompt("닉네임을 입력해주세요.", "");
 }
 
 username = username.substr(0,20);
@@ -76,7 +76,7 @@ console.log(data.inforoom);
   socket.on('setuproomser', function (data) {
 stanza = data.room;	
 console.log('registrato nella stanza ' + stanza);
- //jQuery('<div class="testochatser"><span>FROM SERVER:</span> '+ data.inforoom + data.listautenti +'</div>').appendTo('#testichat');
+ //jQuery('<div class="testochatser"><span>서버 메시지:</span> '+ data.inforoom + data.listautenti +'</div>').appendTo('#testichat');
  //document.getElementById('frecce').style.backgroundColor ='#ffff00';
  });
 
