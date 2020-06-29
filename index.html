@@ -44,12 +44,15 @@
 	
 	</script>
     </head>    
-    <body>
+    <body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
 	<div id="monitorcam" title="drag and drop this monitor" alt="drag and drop this monitor"><video id="video" style="width:320px;height:240px;" autoplay></video></div>	
-<div id="controlli">	
-<div style="float:left;width:90%;height:auto">
-<button id="cancellalavagna" class="btn btn-primary btn-sm">모두 지우기</button>&nbsp;&nbsp;<button id="pencilrubber" class="btn btn-primary btn-sm">지우개</button> <input type="number" id="setrubbersize" min="10" max="300" step="5" value="50" class="form-control input-sm" />&nbsp;<input type="text" class="minicolors" id="minicolore" value="#000000" data-opacity="1.0" />
-<select id="fontsize" class="form-control input-sm">
+<div id="controlli">
+<div style="float:left;width:90%;height:auto;padding-top:20px; padding-left:20px;">
+<button id="cancellalavagna" class="btn btn-primary btn-sm" style="background:#556ee6; border:none; border-radius:10px; color:#fff;">모두 지우기</button>&nbsp;&nbsp;<button id="pencilrubber" class="btn btn-primary btn-sm" style="background:#556ee6; border:none; border-radius:10px; color:#fff;">지우개</button>
+<Br>
+<input type="number" id="setrubbersize" min="10" max="300" step="5" value="50" class="form-control input-sm" /><input type="text" class="minicolors" id="minicolore" value="#000000" data-opacity="1.0" style="background:#556ee6; border:none; border-radius:10px; color:#fff; padding:15px; width:90px; margin-top:10px;"/>&nbsp;
+<br>
+<select id="fontsize" class="form-control input-sm" style="background:#556ee6; border:none; border-radius:10px; color:#fff; margin-top:5px;">
   <option value="14" selected="selected">글자크기</option>
   <option value="8">8</option>
 <option value="9">9</option>
@@ -75,7 +78,7 @@
 <option value="29">29</option>
 <option value="30">30</option>
 </select>
-<select id="spessore" class="form-control input-sm">
+<select id="spessore" class="form-control input-sm" style="background:#556ee6; border:none; border-radius:10px; color:#fff; margin-top:10px;">
   <option value="3" selected="selected">펜 굵기</option>
   <option value="1">1</option>
 	<option value="2">2</option>
@@ -98,11 +101,11 @@
 <option value="19">19</option>
 <option value="20">20</option>
 </select>
-<input type="file" id="file-input" class="form-control input-sm">
-<input type="text" id="scrivi" size="auto" class="form-control input-sm" placeholder="메시지를 입력하고 엔터를 누르세요." /><br />
+<input type="file" id="file-input" class="form-control input-sm" style="background:#556ee6; border:none; border-radius:10px; color:#fff; margin-top:10px;">
+<input type="text" id="scrivi" size="auto" class="form-control input-sm" placeholder="메시지를 입력하고 엔터를 누르세요." style="background:#303a52; border:none; border-radius:10px; color:#fff; margin-top:20px;"/><br/>
 <div id="testichat"></div>
-<button id="catturacam" class="btn btn-primary btn-sm"></button> <button id="audiocall" disabled="disabled" class="btn btn-primary btn-sm"></button><br />
-&nbsp;<label class="checkbox-inline"><input type="checkbox" id="autocamabi" value="">자동 이미지 저장 시간</label><select id="tempocam" class= "form-control input-sm">
+<button id="catturacam" class="btn btn-primary btn-sm" style="display:none;"></button> <button id="audiocall" disabled="disabled" style="display:none;" class="btn btn-primary btn-sm"></button><br />
+&nbsp;<label class="checkbox-inline" style="display:none;"><input type="checkbox" id="autocamabi" value="">자동 이미지 저장 시간</label><select id="tempocam" class= "form-control input-sm" style="display:none;">
 <option value="1000">1</option>
 <option value="2000">2</option>
 <option value="4000">4</option>
@@ -112,25 +115,25 @@
 	<option value="120000">120</option>
     <option value="300000">300</option>
 	<option value="600000">600</option>
-	</select>초<br />
+	</select><br/>
 </div>
-<div id="frecce" onMouseOver='javascript:document.getElementById("frecce").style.backgroundColor ="#ffffff";'>
+<div id="frecce" onMouseOver='javascript:document.getElementById("frecce").style.backgroundColor ="#778beb";'>
+<span style="font-size:1px;color:#778beb">재미있는 칠판 놀이</span><br>
 
-<span style="font-size:28px;font-weight:"600">&nbsp;<br />&nbsp;<br />더<br />보<br />기</span>
 
 </div>
 </div>
 		<div id="cursors">   <!-- The mouse pointers will be created here -->
 		</div>
 		
- <canvas id="paper">Your browser needs to support canvas for this to work!</canvas>		
+ <canvas id="paper">사용중인 브라우저는 지원하지 않습니다. 다른 브라우저에서 시도해보세요.</canvas>		
 	<canvas id="paper1" style="display:none;" width="320" height="240"> </canvas>
 	<div id="divrubber" title="drag to erase with checkbox signed" alt="drag to erase with checkbox signed"><input type="checkbox" id="controlrubber" name="controlrubber" class="form-control input-sm" /></div>
-		<hgroup id="instructions">		
-			<h3>여기에 아무거나 그려보세요.<br />입장한 팀원들과 화면이 실시간으로 공유됩니다.<br />ㅋㅋㅋㅋㅋㅋㅋ</h3>
+		<hgroup style="border-radius:0px 20px 20px 20px; border-color:#574b90; width:auto; padding:20px; left:50px;">		
+			<h3 style="color:#000; font-size:20px">여기에 그림을 그려보세요.</h3>
 		</hgroup>		
-        <footer>				
-	        <h3>인하 바보</h3>
+        <footer style="display:none;">				
+	        <h3></h3>
             <p class='tzine' id='onlineCounter' href=''>Users connected: 0</p>
 <div id="fb-root" style="position:absolute;left:0px;bottom:-10px;width:100px;height:auto;"></div>
 <script>(function(d, s, id) {
