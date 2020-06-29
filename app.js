@@ -132,12 +132,12 @@ var listautenti = '';
 roster.forEach(function(client) {
 listautenti =	listautenti +  client.nickname + '<br />';
 }); 
-listautenti = '현재 참여자 목록: ' +  listautenti;
+listautenti = '현재 참여중인 사용자: ' +  listautenti;
  
  
 socket.emit('setuproomser', {
 			'room' :  data.room,
-				'inforoom' : '현재 이 방은 유효합니다.<br />code: ' + data.room + '<br />',
+				'inforoom' : '방이 개설되었습니다.<br />code: ' + data.room + '<br />',
 				'listautenti' : listautenti
 			});
 socket.broadcast.to(data.room).emit('suonacampser', data);
@@ -160,7 +160,7 @@ roster.forEach(function(client) {
 listautenti =	listautenti +  client.nickname + '<br />';
 }); 
 console.log (listautenti);
-listautenti = '현재 참여자 목록: ' +  listautenti;	
+listautenti = '현재 참여중인 사용자 : ' +  listautenti;	
 socket.broadcast.to(data.room).emit('listautentiser', {
 							'listautenti' : listautenti		
 									});
