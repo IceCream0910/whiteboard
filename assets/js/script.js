@@ -110,7 +110,7 @@ alert	(data.inforoom);
   socket.on('setuproomser', function (data) {
 stanza = data.room;	
  jQuery('<div class="testochatser"><span>FROM SERVER:</span> '+ data.inforoom + data.listautenti +'</div>').appendTo('#testichat');
- document.getElementById('frecce').style.backgroundColor ='#ffff00';
+ document.getElementById('frecce').style.backgroundColor ='#596174';
  document.getElementById('audiocall').disabled = false;
 // document.getElementById('videocall').disabled = false;
 	});
@@ -261,14 +261,14 @@ ctx.drawImage(imgdaclient, data.positionx, data.positiony);
  
 	//alert (data.testochat);
 jQuery('<div class="testochat"><span>' + data.usernamerem +':</span> '+ data.testochat +'</div>').appendTo('#testichat');         
-document.getElementById('frecce').style.backgroundColor ='#ffff00';
+document.getElementById('frecce').style.backgroundColor ='#596174';
 var objDiv1 = document.getElementById("testichat");
 objDiv1.scrollTop = objDiv1.scrollHeight;
 	});
   
   socket.on('listautentiser', function (data) {
 jQuery('<div class="testochatser"><span>서버도우미 마르크스:</span> '+ data.listautenti +'</div>').appendTo('#testichat');
-document.getElementById('frecce').style.backgroundColor ='#ffff00'; 
+document.getElementById('frecce').style.backgroundColor ='#596174'; 
 		});
  	
 	socket.on('moving', function (data) {
