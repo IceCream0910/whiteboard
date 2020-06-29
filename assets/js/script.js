@@ -39,7 +39,7 @@ var color = '#000000';
 
 if(!username)
 {
-	username = prompt("Hey there, insert your nick name, please", "");
+	username = prompt("닉네임을 입력해주세요.", "");
 	
 /*	bootbox.prompt("Hey there, insert your nick name, please", function(result) {                
   if (result === null) {                                             
@@ -116,16 +116,16 @@ stanza = data.room;
 	});
   
  $("#pencilrubber").click(function() {
-if(document.getElementById('pencilrubber').innerHTML === 'Eraser') {
+if(document.getElementById('pencilrubber').innerHTML === '지우개') {
 	jQuery('.minicolors').hide();
-document.getElementById('pencilrubber').innerHTML = 'Pencil';		
+document.getElementById('pencilrubber').innerHTML = '연필';		
 document.getElementById('divrubber').style.display = 'block';		
 document.getElementById('setrubbersize').style.display = 'inline';	
 document.getElementById('spessore').style.display = 'none';	
 controlpencil = false;
 rubbersize =  divrubber.width();
 }else {
-document.getElementById('pencilrubber').innerHTML = 'Eraser';	
+document.getElementById('pencilrubber').innerHTML = '지우개';	
 document.getElementById('divrubber').style.display = 'none';
 document.getElementById('setrubbersize').style.display = 'none';	
 document.getElementById('spessore').style.display = 'inline';
@@ -267,7 +267,7 @@ objDiv1.scrollTop = objDiv1.scrollHeight;
 	});
   
   socket.on('listautentiser', function (data) {
-jQuery('<div class="testochatser"><span>FROM SERVER:</span> '+ data.listautenti +'</div>').appendTo('#testichat');
+jQuery('<div class="testochatser"><span>서버도우미 마르크스:</span> '+ data.listautenti +'</div>').appendTo('#testichat');
 document.getElementById('frecce').style.backgroundColor ='#ffff00'; 
 		});
  	
